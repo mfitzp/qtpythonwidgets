@@ -1,12 +1,15 @@
 import sys
-if 'PyQt5' in sys.modules:
-    from PyQt5 import QtCore, QtGui, QtWidgets
-    from PyQt5.QtCore import Qt, pyqtSignal as Signal
 
+if "PySide6" in sys.modules:
+    from PySide6 import QtGui, QtWidgets
+    from PySide6.QtCore import Qt, Signal
+elif "PyQt5" in sys.modules:
+    from PyQt5 import QtGui, QtWidgets
+    from PyQt5.QtCore import Qt
+    from PyQt5.QtCore import pyqtSignal as Signal
 else:
-    from PySide2 import QtCore, QtGui, QtWidgets
+    from PySide2 import QtGui, QtWidgets
     from PySide2.QtCore import Qt, Signal
-
 
 
 class ColorButton(QtWidgets.QPushButton):
