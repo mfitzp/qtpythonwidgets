@@ -1,7 +1,7 @@
 import sys
 
 if "PyQt5" in sys.modules:
-    from PyQt5 import QtCore, QtWidgets
+    from PyQt5 import QtCore, QtWidgets, QtGui
     from PyQt5.QtCore import Qt, pyqtSignal as Signal
 
 else:
